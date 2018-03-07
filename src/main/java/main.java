@@ -27,7 +27,7 @@ public class main {
        // Dashboard.click();
         System.out.println("Page title is: "+ driver.getTitle());
         driver.navigate().refresh();
-        System.out.println("Update title is: "+ driver.getTitle()+"\n");
+        System.out.println("Update title is: 1 "+ driver.getTitle()+"\n");
 
         Sleep();
 
@@ -35,32 +35,40 @@ public class main {
         Orders.click();
         System.out.println("Page title is: "+ driver.getTitle());
         driver.navigate().refresh();
-        System.out.println("Update title is: "+ driver.getTitle()+"\n");
+        System.out.println("Update title is: 2 "+ driver.getTitle()+"\n");
 
         Sleep();
 
-//        WebElement Catalog = driver.findElement(By.id("subtab-AdminCatalog"));
-//        Catalog.click();
-//        System.out.println("Page title is: "+ driver.getTitle());
-//        driver.navigate().refresh();
-//        System.out.println("Update title is: "+ driver.getTitle()+"\n");
-//
-//        Sleep();
 
-        WebElement Customer = driver.findElement(By.id("subtab-AdminParentCustomer"));
+        WebElement Catalog = driver.findElement(By.id("subtab-AdminCatalog"));
+        Catalog.click();
+        System.out.println("Page title is: "+ driver.getTitle());
+        driver.navigate().refresh();
+        System.out.println("Update title is: 3 "+ driver.getTitle()+"\n");
+
+        Sleep();
+
+        //!!!!!!!!
+//        WebElement Customer = driver.findElement(By.linkText("account_circle"));
+//                By.className()
+//        WebElement Customer = driver.findElement(By.className("link-levelone"));
+
+        WebElement Customer = driver.findElement(By.partialLinkText("Клиенты"));
         Customer.click();
         System.out.println("Page title is: "+ driver.getTitle());
         driver.navigate().refresh();
-        System.out.println("Update title is: "+ driver.getTitle()+"\n");
+        System.out.println("Update title is: 4 "+ driver.getTitle()+"\n");
 
         Sleep();
+
+        //!!!!!!!
 
         WebElement Threads = driver.findElement(By.id("subtab-AdminParentCustomerThreads"));
         Threads.click();
         System.out.println("Page title is: "+ driver.getTitle());
         Sleep();
         driver.navigate().refresh();
-        System.out.println("Update title is: "+ driver.getTitle()+"\n");
+        System.out.println("Update title is: 5 "+ driver.getTitle()+"\n");
 
         Sleep();
 
@@ -69,34 +77,34 @@ public class main {
         System.out.println("Page title is: "+ driver.getTitle());
         Sleep();
         driver.navigate().refresh();
-        System.out.println("Update title is: "+ driver.getTitle()+"\n");
+        System.out.println("Update title is: 6 "+ driver.getTitle()+"\n");
 
         Sleep();
 
-        // WebElement ModulesSf = driver.findElement(By.id("subtab-AdminParentModulesSf"));
-        // ModulesSf.click();
-        // System.out.println("Page title is: "+ driver.getTitle());
-        // Sleep2();
-        // driver.navigate().refresh();
-        // System.out.println("Update title is: "+ driver.getTitle()+"\n");
+        WebElement ModulesSf = driver.findElement(By.id("subtab-AdminParentModulesSf"));
+        ModulesSf.click();
+        System.out.println("Page title is: "+ driver.getTitle());
+        Sleep();
+        driver.navigate().refresh();
+        System.out.println("Update title is: 7 "+ driver.getTitle()+"\n");
 
-        // Sleep2();System.out.println("Page title is: "+ driver.getTitle());
+        Sleep(); //System.out.println("Page title is: "+ driver.getTitle());
 
-       WebElement Themes = driver.findElement(By.id("subtab-AdminParentThemes"));
-       Themes.click();
-       System.out.println("Page title is: "+ driver.getTitle());
-       Sleep();
-       driver.navigate().refresh();
-       System.out.println("Update title is: "+ driver.getTitle()+"\n");
+        WebElement Themes = driver.findElement(By.partialLinkText("Design"));
+        Themes.click();
+        System.out.println("Page title is: "+ driver.getTitle());
+        Sleep();
+        driver.navigate().refresh();
+        System.out.println("Update title is: 8 "+ driver.getTitle()+"\n");
 
-       Sleep();
+        Sleep();
 
         WebElement Shipping = driver.findElement(By.id("subtab-AdminParentShipping"));
         Shipping.click();
         System.out.println("Page title is: "+ driver.getTitle());
         Sleep();
         driver.navigate().refresh();
-        System.out.println("Update title is: "+ driver.getTitle()+"\n");
+        System.out.println("Update title is: 9 "+ driver.getTitle()+"\n");
 
         Sleep();
 
@@ -105,7 +113,7 @@ public class main {
         System.out.println("Page title is: "+ driver.getTitle());
         Sleep();
         driver.navigate().refresh();
-        System.out.println("Update title is: "+ driver.getTitle()+"\n");
+        System.out.println("Update title is: 10 "+ driver.getTitle()+"\n");
 
         Sleep();
 
@@ -114,7 +122,7 @@ public class main {
         System.out.println("Page title is: "+ driver.getTitle());
         Sleep();
         driver.navigate().refresh();
-        System.out.println("Update title is: "+ driver.getTitle()+"\n");
+        System.out.println("Update title is: 11 "+ driver.getTitle()+"\n");
 
         Sleep();
 
@@ -123,7 +131,7 @@ public class main {
         System.out.println("Page title is: "+ driver.getTitle());
         Sleep();
         driver.navigate().refresh();
-        System.out.println("Update title is: "+ driver.getTitle()+"\n");
+        System.out.println("Update title is: 12 "+ driver.getTitle()+"\n");
 
         Sleep();
 
@@ -132,7 +140,7 @@ public class main {
         System.out.println("Page title is: "+ driver.getTitle());
         Sleep();
         driver.navigate().refresh();
-        System.out.println("Update title is: "+ driver.getTitle()+"\n");
+        System.out.println("Update title is: 13 "+ driver.getTitle()+"\n");
 
         Sleep();
 
@@ -147,16 +155,16 @@ public class main {
 
     public static void  Sleep(){
         try {
-              Thread.sleep(1500);
+              Thread.sleep(1000);
         } catch(InterruptedException e) {
             System.out.println("got interrupted!");
         }
     }
-    public static void  Sleep2(){
+ /*   public static void  Sleep2(){
         try {
             Thread.sleep(20000);
         } catch(InterruptedException e) {
             System.out.println("got interrupted!");
         }
-    }
+    }*/
 }
