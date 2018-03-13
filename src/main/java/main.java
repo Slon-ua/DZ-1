@@ -2,6 +2,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class main {
     public static void main(String[] args) {
@@ -24,7 +25,7 @@ public class main {
         Sleep();
 
         WebElement Dashboard = driver.findElement(By.id("tab-AdminDashboard"));
-       // Dashboard.click();
+        // Dashboard.click();
         System.out.println("Page title is: "+ driver.getTitle());
         driver.navigate().refresh();
         System.out.println("Update title is: 1 "+ driver.getTitle()+"\n");
@@ -142,20 +143,19 @@ public class main {
         driver.navigate().refresh();
         System.out.println("Update title is: 13 "+ driver.getTitle()+"\n");
 
-        Sleep();
-
-
-
+        driver.quit();
     }
 
     public static WebDriver initChromeDriver(){
         System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/drivers/chromedriver.exe");
-        return new ChromeDriver();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--start-maximized");
+        return new ChromeDriver(options);
     }
 
     public static void  Sleep(){
         try {
-              Thread.sleep(1000);
+            Thread.sleep(1000);
         } catch(InterruptedException e) {
             System.out.println("got interrupted!");
         }
